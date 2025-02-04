@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuru Kuru Kururin</title>
+    <style>
+        body {
+            background-color: #2d2d2d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        img, video {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Back-knop styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .image-container {
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat ze gecentreerd worden */
+    gap: 10px; /* Ruimte tussen de afbeeldingen */
+    flex-wrap: wrap; /* Zorgt ervoor dat ze naar een nieuwe regel gaan als er geen ruimte is */
+}
+
+.image-container img {
+    width: 30%; /* Zorgt ervoor dat de afbeeldingen even groot blijven */
+    max-width: 400px; /* Beperkt de grootte */
+    height: auto;
+    border-radius: 8px;
+}
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back-knop -->
+    <a href="index.html" class="back-button">⬅ Terug</a>
+
+    <div class="container">
+        <h1>Kuru Kuru Kururin</h1>
+        <div class="image-container">
+        <img src="/assets/imgs/kuru1.png" alt="Placeholder Image 1">
+        <img src="/assets/imgs/kuru2.png" alt="Placeholder Image 2">
+        <img src="/assets/imgs/kuru3.png" alt="Placeholder Image 3">
+    </div>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Je browser ondersteunt geen video-element.
+        </video>
+
+        <div class="text-section">
+            <h2>Over het spel</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

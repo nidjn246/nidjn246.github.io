@@ -204,7 +204,9 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-1.jpg" alt="">
+                        <a href="kuru-kuru-kururin.html"> <!-- Klikbare link -->
+                            <img src="assets/imgs/folio-1.jpg" alt="">
+                        </a>
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <h5>Kuru Kuru Kururin</h5>
@@ -465,5 +467,20 @@
     <!-- steller js -->
     <script src="assets/js/steller.js"></script>
 
+
+    <script>
+        // Herstel de scrollpositie als deze is opgeslagen
+        document.addEventListener("DOMContentLoaded", function () {
+            if (sessionStorage.getItem("scrollPosition")) {
+                window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
+            }
+        });
+    
+        // Sla de scrollpositie op wanneer je de pagina verlaat
+        window.addEventListener("beforeunload", function () {
+            sessionStorage.setItem("scrollPosition", window.scrollY);
+        });
+    </script>
+    
 </body>
 </html>

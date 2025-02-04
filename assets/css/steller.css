@@ -11093,6 +11093,7 @@ pre {
   opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  pointer-events: none;
 }
 
 .img-wrapper .overlay .overlay-infos {
