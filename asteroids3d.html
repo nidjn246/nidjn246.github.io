@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids3D!</title>
+    <style>
+        body {
+            background-color: #2d2d2d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 32%;
+            max-width: 250px;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .game-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 100%;
+            height: auto;
+            background: #231F20;
+            border-radius: 8px;
+        }
+
+        .loading-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffffff; /* Tomato color */
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-button">⬅ Terug</a>
+
+    <div class="container">
+        <h1>Asteroids3D!</h1>
+
+        
+        <div class="image-container">
+            <img src="assets/imgs/asteroid1.png" alt="Placeholder Image 1">
+            <img src="assets/imgs/asteroid2.png" alt="Placeholder Image 2">
+            <img src="assets/imgs/asteroid3.png" alt="Placeholder Image 3">
+        </div>
+        
+        <!-- Loading message added here -->
+        <div class="loading-message">
+            The game can take a while to load!
+        </div>
+        <div class="game-container">
+            <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
+            <script src="assets/unity/Build/gzip.loader.js"></script>
+            <script>
+                createUnityInstance(document.querySelector("#unity-canvas"), {
+                    dataUrl: "assets/unity/Build/gzip.data.gz",
+                    frameworkUrl: "assets/unity/Build/gzip.framework.js.gz",
+                    codeUrl: "assets/unity/Build/gzip.wasm.gz",
+                    streamingAssetsUrl: "StreamingAssets",
+                    companyName: "MilanVeldhuizen",
+                    productName: "Asteroids 3D",
+                    productVersion: "1"
+                });
+            </script>
+        </div>
+
+        <div class="text-section">
+            <h2>About this game</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla ipsum modi quos corrupti maiores aspernatur aut provident necessitatibus architecto neque dolore placeat cumque adipisci, obcaecati, dolorem, ipsa suscipit repellendus?
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
