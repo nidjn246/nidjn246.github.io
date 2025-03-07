@@ -77,7 +77,7 @@
         .loading-message {
             font-size: 18px;
             margin-bottom: 20px;
-            color: #ffffff; /* Tomato color */
+            color: #ffffff;
         }
     </style>
 </head>
@@ -88,25 +88,23 @@
     <div class="container">
         <h1>Asteroids3D!</h1>
 
-        
         <div class="image-container">
             <img src="assets/imgs/asteroid1.png" alt="Placeholder Image 1">
             <img src="assets/imgs/asteroid2.png" alt="Placeholder Image 2">
             <img src="assets/imgs/asteroid3.png" alt="Placeholder Image 3">
         </div>
         
-        <!-- Loading message added here -->
         <div class="loading-message">
             The game can take a while to load!
         </div>
         <div class="game-container">
             <canvas id="unity-canvas" width="960" height="540" tabindex="-1"></canvas>
-            <script src="assets/unity/Build/gzip.loader.js"></script>
+            <script src="assets/unity/Build/uncompressee.loader.js"></script>
             <script>
                 createUnityInstance(document.querySelector("#unity-canvas"), {
-                    dataUrl: "assets/unity/Build/gzip.data.gz",
-                    frameworkUrl: "assets/unity/Build/gzip.framework.js.gz",
-                    codeUrl: "assets/unity/Build/gzip.wasm.gz",
+                    dataUrl: "assets/unity/Build/uncompressee.data",
+                    frameworkUrl: "assets/unity/Build/uncompressee.framework.js",
+                    codeUrl: "assets/unity/Build/uncompressee.wasm",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "MilanVeldhuizen",
                     productName: "Asteroids 3D",
