@@ -7,7 +7,7 @@
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=960 height=540 tabindex="-1" style="width: 960px; height: 540px; background: #231F20"></canvas>
-    <script src="Build/gzip.loader.js"></script>
+    <script src="Build/uncompressee.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -26,9 +26,9 @@
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/gzip.data.gz",
-        frameworkUrl: "Build/gzip.framework.js.gz",
-        codeUrl: "Build/gzip.wasm.gz",
+        dataUrl: "Build/uncompressee.data",
+        frameworkUrl: "Build/uncompressee.framework.js",
+        codeUrl: "Build/uncompressee.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "MilanVeldhuizen",
         productName: "Asteroids 3D",
